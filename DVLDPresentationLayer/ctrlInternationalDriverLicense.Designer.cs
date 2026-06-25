@@ -1,0 +1,497 @@
+﻿namespace DVLDPresentationLayer
+{
+    partial class ctrlInternationalDriverLicense
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gBoxLicenseINfo = new System.Windows.Forms.GroupBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.LbAppID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LbInterLicenseId = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LbName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.LbIsActive = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.LbExperationDate = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.LbDriverID = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.LbDateOfBirth = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.LbLocalLicenseID = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.LbIssueDate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.LbGendor = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.LbNationalNo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gBoxLicenseINfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gBoxLicenseINfo
+            // 
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox6);
+            this.gBoxLicenseINfo.Controls.Add(this.LbAppID);
+            this.gBoxLicenseINfo.Controls.Add(this.label7);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox1);
+            this.gBoxLicenseINfo.Controls.Add(this.LbInterLicenseId);
+            this.gBoxLicenseINfo.Controls.Add(this.label6);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox2);
+            this.gBoxLicenseINfo.Controls.Add(this.LbName);
+            this.gBoxLicenseINfo.Controls.Add(this.label3);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox9);
+            this.gBoxLicenseINfo.Controls.Add(this.LbIsActive);
+            this.gBoxLicenseINfo.Controls.Add(this.label10);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox12);
+            this.gBoxLicenseINfo.Controls.Add(this.LbExperationDate);
+            this.gBoxLicenseINfo.Controls.Add(this.label16);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox13);
+            this.gBoxLicenseINfo.Controls.Add(this.LbDriverID);
+            this.gBoxLicenseINfo.Controls.Add(this.label18);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox14);
+            this.gBoxLicenseINfo.Controls.Add(this.LbDateOfBirth);
+            this.gBoxLicenseINfo.Controls.Add(this.label20);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox8);
+            this.gBoxLicenseINfo.Controls.Add(this.LbLocalLicenseID);
+            this.gBoxLicenseINfo.Controls.Add(this.label9);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox5);
+            this.gBoxLicenseINfo.Controls.Add(this.LbIssueDate);
+            this.gBoxLicenseINfo.Controls.Add(this.label2);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox4);
+            this.gBoxLicenseINfo.Controls.Add(this.LbGendor);
+            this.gBoxLicenseINfo.Controls.Add(this.label5);
+            this.gBoxLicenseINfo.Controls.Add(this.pictureBox3);
+            this.gBoxLicenseINfo.Controls.Add(this.LbNationalNo);
+            this.gBoxLicenseINfo.Controls.Add(this.label4);
+            this.gBoxLicenseINfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBoxLicenseINfo.Location = new System.Drawing.Point(14, 16);
+            this.gBoxLicenseINfo.Name = "gBoxLicenseINfo";
+            this.gBoxLicenseINfo.Size = new System.Drawing.Size(1013, 381);
+            this.gBoxLicenseINfo.TabIndex = 1;
+            this.gBoxLicenseINfo.TabStop = false;
+            this.gBoxLicenseINfo.Text = "International Driver License Info";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_name_80;
+            this.pictureBox6.Location = new System.Drawing.Point(702, 94);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 53;
+            this.pictureBox6.TabStop = false;
+            // 
+            // LbAppID
+            // 
+            this.LbAppID.AutoSize = true;
+            this.LbAppID.ForeColor = System.Drawing.Color.OrangeRed;
+            this.LbAppID.Location = new System.Drawing.Point(780, 94);
+            this.LbAppID.Name = "LbAppID";
+            this.LbAppID.Size = new System.Drawing.Size(106, 29);
+            this.LbAppID.TabIndex = 52;
+            this.LbAppID.Text = "LbAppID";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(591, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 29);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "App Id:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_name_80;
+            this.pictureBox1.Location = new System.Drawing.Point(236, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            // 
+            // LbInterLicenseId
+            // 
+            this.LbInterLicenseId.AutoSize = true;
+            this.LbInterLicenseId.ForeColor = System.Drawing.Color.OrangeRed;
+            this.LbInterLicenseId.Location = new System.Drawing.Point(297, 103);
+            this.LbInterLicenseId.Name = "LbInterLicenseId";
+            this.LbInterLicenseId.Size = new System.Drawing.Size(164, 29);
+            this.LbInterLicenseId.TabIndex = 49;
+            this.LbInterLicenseId.Text = "InterLicenseId";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(45, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 29);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Inter.License ID:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_name_80;
+            this.pictureBox2.Location = new System.Drawing.Point(191, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LbName
+            // 
+            this.LbName.AutoSize = true;
+            this.LbName.ForeColor = System.Drawing.Color.OrangeRed;
+            this.LbName.Location = new System.Drawing.Point(267, 44);
+            this.LbName.Name = "LbName";
+            this.LbName.Size = new System.Drawing.Size(84, 29);
+            this.LbName.TabIndex = 46;
+            this.LbName.Text = "Name ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 29);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Name :";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_name_80;
+            this.pictureBox9.Location = new System.Drawing.Point(702, 144);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 44;
+            this.pictureBox9.TabStop = false;
+            // 
+            // LbIsActive
+            // 
+            this.LbIsActive.AutoSize = true;
+            this.LbIsActive.ForeColor = System.Drawing.Color.OrangeRed;
+            this.LbIsActive.Location = new System.Drawing.Point(780, 144);
+            this.LbIsActive.Name = "LbIsActive";
+            this.LbIsActive.Size = new System.Drawing.Size(95, 29);
+            this.LbIsActive.TabIndex = 43;
+            this.LbIsActive.Text = "IsActive";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(578, 144);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 29);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "IsActive:";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox12.Location = new System.Drawing.Point(702, 305);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 35;
+            this.pictureBox12.TabStop = false;
+            // 
+            // LbExperationDate
+            // 
+            this.LbExperationDate.AutoSize = true;
+            this.LbExperationDate.Location = new System.Drawing.Point(772, 305);
+            this.LbExperationDate.Name = "LbExperationDate";
+            this.LbExperationDate.Size = new System.Drawing.Size(178, 29);
+            this.LbExperationDate.TabIndex = 34;
+            this.LbExperationDate.Text = "ExperationDate";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(489, 305);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(190, 29);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Experation Date:";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox13.Location = new System.Drawing.Point(702, 255);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 32;
+            this.pictureBox13.TabStop = false;
+            // 
+            // LbDriverID
+            // 
+            this.LbDriverID.AutoSize = true;
+            this.LbDriverID.Location = new System.Drawing.Point(772, 255);
+            this.LbDriverID.Name = "LbDriverID";
+            this.LbDriverID.Size = new System.Drawing.Size(97, 29);
+            this.LbDriverID.TabIndex = 31;
+            this.LbDriverID.Text = "DriverId";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(561, 255);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(118, 29);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "Driver ID :";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox14.Location = new System.Drawing.Point(702, 202);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 29;
+            this.pictureBox14.TabStop = false;
+            // 
+            // LbDateOfBirth
+            // 
+            this.LbDateOfBirth.AutoSize = true;
+            this.LbDateOfBirth.Location = new System.Drawing.Point(772, 202);
+            this.LbDateOfBirth.Name = "LbDateOfBirth";
+            this.LbDateOfBirth.Size = new System.Drawing.Size(137, 29);
+            this.LbDateOfBirth.TabIndex = 28;
+            this.LbDateOfBirth.Text = "DateOfBirth";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(524, 202);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(155, 29);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Date Of Birth:";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_name_80;
+            this.pictureBox8.Location = new System.Drawing.Point(236, 156);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 26;
+            this.pictureBox8.TabStop = false;
+            // 
+            // LbLocalLicenseID
+            // 
+            this.LbLocalLicenseID.AutoSize = true;
+            this.LbLocalLicenseID.ForeColor = System.Drawing.Color.OrangeRed;
+            this.LbLocalLicenseID.Location = new System.Drawing.Point(302, 156);
+            this.LbLocalLicenseID.Name = "LbLocalLicenseID";
+            this.LbLocalLicenseID.Size = new System.Drawing.Size(175, 29);
+            this.LbLocalLicenseID.TabIndex = 25;
+            this.LbLocalLicenseID.Text = "LocalLicenseId";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(28, 156);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(196, 29);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Local.License ID:";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox5.Location = new System.Drawing.Point(228, 317);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // LbIssueDate
+            // 
+            this.LbIssueDate.AutoSize = true;
+            this.LbIssueDate.Location = new System.Drawing.Point(294, 317);
+            this.LbIssueDate.Name = "LbIssueDate";
+            this.LbIssueDate.Size = new System.Drawing.Size(120, 29);
+            this.LbIssueDate.TabIndex = 13;
+            this.LbIssueDate.Text = "IssueDate";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(45, 317);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 29);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Issue Date:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox4.Location = new System.Drawing.Point(228, 267);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // LbGendor
+            // 
+            this.LbGendor.AutoSize = true;
+            this.LbGendor.Location = new System.Drawing.Point(294, 267);
+            this.LbGendor.Name = "LbGendor";
+            this.LbGendor.Size = new System.Drawing.Size(94, 29);
+            this.LbGendor.TabIndex = 10;
+            this.LbGendor.Text = "Gendor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(71, 267);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 29);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Gendor :";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DVLDPresentationLayer.Properties.Resources.License_Type_32;
+            this.pictureBox3.Location = new System.Drawing.Point(228, 214);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // LbNationalNo
+            // 
+            this.LbNationalNo.AutoSize = true;
+            this.LbNationalNo.Location = new System.Drawing.Point(294, 214);
+            this.LbNationalNo.Name = "LbNationalNo";
+            this.LbNationalNo.Size = new System.Drawing.Size(134, 29);
+            this.LbNationalNo.TabIndex = 7;
+            this.LbNationalNo.Text = "NationalNo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 214);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 29);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "NationalNo:";
+            // 
+            // ctrlInternationalDriverLicense
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gBoxLicenseINfo);
+            this.Name = "ctrlInternationalDriverLicense";
+            this.Size = new System.Drawing.Size(1046, 423);
+            this.Load += new System.EventHandler(this.ctrlInternationalDriverLicense_Load);
+            this.gBoxLicenseINfo.ResumeLayout(false);
+            this.gBoxLicenseINfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gBoxLicenseINfo;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label LbAppID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LbInterLicenseId;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label LbName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label LbIsActive;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label LbExperationDate;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label LbDriverID;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Label LbDateOfBirth;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label LbLocalLicenseID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label LbIssueDate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label LbGendor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label LbNationalNo;
+        private System.Windows.Forms.Label label4;
+    }
+}
