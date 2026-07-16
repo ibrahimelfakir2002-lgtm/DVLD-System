@@ -190,9 +190,17 @@ namespace DVLDPresentationLayer
             int personID = (int)DgvPeople.CurrentRow.Cells["PersonID"].Value;
 
             FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(personID);
+
+            frm.OnPersonSaved += (ID) =>
+            {
+                if (ID > 0) // 🔥 هذا هو الصح
+                {
+                    RefreshPeopleList();
+                }
+            };
             frm.Show();
 
-            RefreshPeopleList();
+            //RefreshPeopleList();
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
