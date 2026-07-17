@@ -187,5 +187,24 @@ FROM Drivers_View";
         }
 
 
+        public static bool IsPersonDriver(int personId)
+        {
+            using (SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT TOP 1 1
+                         FROM Drivers
+                         WHERE PersonID = @PersonId";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@PersonId", personId);
+
+                    con.Open();
+                    return cmd.ExecuteScalar() != null;
+                }
+            }
+        }
+
+
     }
 }

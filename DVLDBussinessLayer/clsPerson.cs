@@ -302,15 +302,19 @@ namespace DVLDBussinessLayer
 
             return false;
         }
+       
+
         public static List<string> GetDeleteBlockingReasons(int personID)
         {
             List<string> reasons = new List<string>();
 
-            if (clsUser.IsActiveUserExistsByPersonID(personID))
-                reasons.Add("This person has an active user account.");
+            if (clsUser.IsPersonUser(personID))
+                reasons.Add("This person has a user account.");
 
-            //if (clsDriver.IsPersonHasActiveDriver(personID))
-            //    reasons.Add("This person has an active driver profile.");
+            if (ClsDriver.IsPersonDriver(personID))
+                reasons.Add("This person has a driver profile.");
+
+         
 
             return reasons;
         }

@@ -223,7 +223,6 @@ namespace DVLDPresentationLayer
             };
 
             frm.ShowDialog();
-            RefreshPeopleList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

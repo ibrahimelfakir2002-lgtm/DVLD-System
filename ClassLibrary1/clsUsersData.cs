@@ -368,10 +368,9 @@ namespace DVLDDataAccessLayer
         {
             using (SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = @"SELECT TOP 1 1 
-                         FROM Users 
-                         WHERE PersonID = @PersonId 
-                         AND IsActive = 1";
+                string query = @"SELECT TOP 1 1
+FROM Users
+WHERE PersonID = @PersonId";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {

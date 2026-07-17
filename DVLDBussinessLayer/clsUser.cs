@@ -203,7 +203,7 @@ namespace DVLDBusinessLayer
             return clsUsersData.IsPasswordCorrect(UserID, Password);
         }
 
-        public static bool IsActiveUserExistsByPersonID(int PersonID)
+        public static bool IsPersonUser(int PersonID)
         {
             return clsUsersData.IsActiveUserExistsByPersonID((int)PersonID);
         }
