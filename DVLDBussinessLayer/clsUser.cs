@@ -205,7 +205,7 @@ namespace DVLDBusinessLayer
 
         public static bool IsPersonUser(int PersonID)
         {
-            return clsUsersData.IsActiveUserExistsByPersonID((int)PersonID);
+            return clsUsersData.IsUserExistsByPersonID((int)PersonID);
         }
 
       

@@ -364,8 +364,7 @@ namespace DVLDDataAccessLayer
             return isFound;
         }
 
-        public static bool IsActiveUserExistsByPersonID(int personId)
-        {
+        public static bool IsUserExistsByPersonID(int personId) {  
             using (SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"SELECT TOP 1 1

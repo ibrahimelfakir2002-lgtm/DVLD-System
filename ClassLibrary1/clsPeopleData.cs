@@ -926,25 +926,25 @@ namespace DVLDDataAccessLayer
                                     P.SecondName,
                                     P.ThirdName,
                                     P.LastName,
-                                    P.DateOfBirth,
-
-                                    CASE 
+                                     CASE 
                                         WHEN P.Gendor = 0 THEN 'Male'
                                         ELSE 'Female'
                                     END AS GenderText,
+                                    P.DateOfBirth,
+                                     C.CountryName as Nationality ,
+                                    
 
-                                    P.Address,
                                     P.Phone,
                                     P.Email,
-                                    P.NationalityCountryID,
-                                    C.CountryName,
+                                  
                                     P.ImagePath
 
                                 FROM People P
                                 INNER JOIN Countries C
                                     ON P.NationalityCountryID = C.CountryID
 
-                                WHERE P.IsActive = 1"; 
+                                WHERE P.IsActive = 1
+order by  P.FirstName"; 
             SqlCommand cmd = new SqlCommand(query, con);    
 
             try

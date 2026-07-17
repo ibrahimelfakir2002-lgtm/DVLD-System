@@ -251,7 +251,7 @@ namespace DVLDPresentationLayer
 
             if (_Mode == enMode.Add)
             {
-                if (clsUser.IsActiveUserExistsByPersonID(_SelectedPersonID))
+                if (clsUser.IsPersonUser(_SelectedPersonID))
                 {
                     MessageBox.Show("User already exists for this person");
                     return;
