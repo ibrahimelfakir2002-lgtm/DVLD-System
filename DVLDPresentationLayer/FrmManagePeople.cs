@@ -180,9 +180,17 @@ namespace DVLDPresentationLayer
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(-1);
+
+            frm.OnPersonSaved += (ID) =>
+            {
+                if (ID > 0) // 🔥 هذا هو الصح
+                {
+                    RefreshPeopleList();
+                }
+            };
+
             frm.ShowDialog();
 
-            RefreshPeopleList(); // إعادة تحميل البيانات
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
