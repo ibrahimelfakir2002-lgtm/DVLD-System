@@ -943,7 +943,6 @@ namespace DVLDDataAccessLayer
                                 INNER JOIN Countries C
                                     ON P.NationalityCountryID = C.CountryID
 
-                                WHERE P.IsActive = 1
 order by  P.FirstName"; 
             SqlCommand cmd = new SqlCommand(query, con);    
 
