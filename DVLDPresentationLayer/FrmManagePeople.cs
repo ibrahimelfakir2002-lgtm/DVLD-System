@@ -1,4 +1,5 @@
 ﻿using DVLDBussinessLayer;
+using DVLDPresentationLayer.People;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -69,7 +70,7 @@ namespace DVLDPresentationLayer
             {
                 if (personID > 0) // 🔥 هذا هو الصح
                 {
-                    RefreshPeopleList();
+                    _RefreshPeoplList();
                 }
             };
 
@@ -122,7 +123,7 @@ namespace DVLDPresentationLayer
         }
         private void FrmManagePeople_Load_1(object sender, EventArgs e)
         {
-            RefreshPeopleList();
+            _RefreshPeoplList();
 
 
             LbNumberOfRecords.Text = _dtPeople.DefaultView.Count.ToString();
@@ -164,7 +165,7 @@ namespace DVLDPresentationLayer
             }
         }
 
-        private void RefreshPeopleList()
+        private void _RefreshPeoplList()
         {
             _dtPeople = clsPerson.GetAllPersons();
 
@@ -179,36 +180,26 @@ namespace DVLDPresentationLayer
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(-1);
+            
 
-            frm.OnPersonSaved += (ID) =>
-            {
-                if (ID > 0) // 🔥 هذا هو الصح
-                {
-                    RefreshPeopleList();
-                }
-            };
 
-            frm.ShowDialog();
-
+            Form frm1 = new frmAddUpdatePerson();
+            frm1.ShowDialog();
+            _RefreshPeoplList();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int personID = (int)DgvPeople.CurrentRow.Cells["PersonID"].Value;
 
-            FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(personID);
 
-            frm.OnPersonSaved += (ID) =>
-            {
-                if (ID > 0) // 🔥 هذا هو الصح
-                {
-                    RefreshPeopleList();
-                }
-            };
-            frm.Show();
 
-            //RefreshPeopleList();
+            
+
+
+            Form frm1 = new frmAddUpdatePerson(personID);
+            frm1.ShowDialog();
+            _RefreshPeoplList();
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -219,7 +210,7 @@ namespace DVLDPresentationLayer
 
             frm.OnPersonUpdated += (success) =>
             {
-                RefreshPeopleList(); // 🔥 تحديث الجدول مباشرة
+                _RefreshPeoplList(); // 🔥 تحديث الجدول مباشرة
             };
 
             frm.ShowDialog();
@@ -260,7 +251,7 @@ namespace DVLDPresentationLayer
                 MessageBox.Show("Person deactivated successfully.", "", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
 
-                RefreshPeopleList();
+                _RefreshPeoplList();
             }
             else
             {
@@ -306,7 +297,7 @@ namespace DVLDPresentationLayer
             FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(personID);
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                RefreshPeopleList();
+                _RefreshPeoplList();
             }
         }
 

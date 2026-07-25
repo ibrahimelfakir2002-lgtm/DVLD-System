@@ -25,7 +25,11 @@ namespace DVLDBussinessLayer
         public string ThirdName {  get; set; }
 
         public string LastName { get; set; }
+        public string FullName
+        {
+            get { return FirstName + " " + SecondName + " " + ThirdName + " " + LastName; }
 
+        }
         public DateTime DateOfBirth { get; set; }
 
         public int Gendor {  get; set; }
@@ -34,8 +38,17 @@ namespace DVLDBussinessLayer
         public string Email { get; set; }
         public int NationalityCountryID { get; set; }
 
-        public string ImagePath {  get; set; }
-        
+        public clsCountry CountryInfo;
+
+        private string _ImagePath;
+
+        public string ImagePath
+        {
+            get { return _ImagePath; }
+            set { _ImagePath = value; }
+        }
+
+
         public clsPerson()
         {
             this.PersonID = -1;
@@ -70,6 +83,8 @@ namespace DVLDBussinessLayer
             this.Phone = Phone;
             this.Email = Email;
             this.NationalityCountryID = NationalityCountryID;
+
+            this.CountryInfo = clsCountry.GetCountryByCountryID(NationalityCountryID);
             this.ImagePath = ImagePath;
 
             this.Mode = enMode.Update;
@@ -336,7 +351,13 @@ namespace DVLDBussinessLayer
         {
             return clsPeopleData.GetAllPersons();
         }
-       
+
+
+        public static bool isPersonExist(string NationlNo)
+        {
+            return clsPeopleData.IsNationalNumberExists(NationlNo);
+        }
+
     }
 
 
