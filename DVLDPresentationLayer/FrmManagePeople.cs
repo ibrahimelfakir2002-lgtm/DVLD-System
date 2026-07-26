@@ -180,8 +180,7 @@ namespace DVLDPresentationLayer
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-
+         
 
             Form frm1 = new frmAddUpdatePerson();
             frm1.ShowDialog();
@@ -193,10 +192,6 @@ namespace DVLDPresentationLayer
             int personID = (int)DgvPeople.CurrentRow.Cells["PersonID"].Value;
 
 
-
-            
-
-
             Form frm1 = new frmAddUpdatePerson(personID);
             frm1.ShowDialog();
             _RefreshPeoplList();
@@ -204,16 +199,9 @@ namespace DVLDPresentationLayer
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int personID = (int)DgvPeople.CurrentRow.Cells["PersonID"].Value;
-
-            FrmPersonDetails frm = new FrmPersonDetails(personID);
-
-            frm.OnPersonUpdated += (success) =>
-            {
-                _RefreshPeoplList(); // 🔥 تحديث الجدول مباشرة
-            };
-
+            frmFindPerson frm = new frmFindPerson();
             frm.ShowDialog();
+            _RefreshPeoplList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -294,16 +282,25 @@ namespace DVLDPresentationLayer
             if (e.RowIndex < 0) return;
 
             int personID = Convert.ToInt32(DgvPeople.Rows[e.RowIndex].Cells["PersonID"].Value);
-            FrmAddEditPersonInfo frm = new FrmAddEditPersonInfo(personID);
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                _RefreshPeoplList();
-            }
+            frmShowPersonInfo frm = new frmShowPersonInfo(personID);
+
+            frm.ShowDialog();
+            _RefreshPeoplList();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = (int)DgvPeople.CurrentRow.Cells["PersonID"].Value;
+
+            frmShowPersonInfo frm = new frmShowPersonInfo(personID);
+
+            frm.ShowDialog();
+            _RefreshPeoplList();
         }
     }
 }

@@ -33,19 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvPeople = new System.Windows.Forms.DataGridView();
             this.contextMenuPerson = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbAddPerson = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.LbNumberOfRecords = new System.Windows.Forms.Label();
             this.BntClose = new System.Windows.Forms.Button();
+            this.pbAddPerson = new System.Windows.Forms.PictureBox();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPeople)).BeginInit();
             this.contextMenuPerson.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,40 +88,20 @@
             // 
             this.contextMenuPerson.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuPerson.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
             this.addToolStripMenuItem,
             this.editToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuPerson.Name = "contextMenuPerson";
-            this.contextMenuPerson.Size = new System.Drawing.Size(169, 132);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(168, 32);
-            this.addToolStripMenuItem.Text = " Add New ";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(168, 32);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            this.contextMenuPerson.Size = new System.Drawing.Size(257, 237);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(168, 32);
-            this.viewToolStripMenuItem.Text = "View ";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.viewToolStripMenuItem.Text = "Find ";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(168, 32);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -168,17 +149,6 @@
             this.panel1.Size = new System.Drawing.Size(1165, 100);
             this.panel1.TabIndex = 5;
             // 
-            // pbAddPerson
-            // 
-            this.pbAddPerson.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_add_user_male_16_1_;
-            this.pbAddPerson.Location = new System.Drawing.Point(1080, 17);
-            this.pbAddPerson.Name = "pbAddPerson";
-            this.pbAddPerson.Size = new System.Drawing.Size(73, 41);
-            this.pbAddPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAddPerson.TabIndex = 8;
-            this.pbAddPerson.TabStop = false;
-            this.pbAddPerson.Click += new System.EventHandler(this.pbAddPerson_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -212,6 +182,50 @@
             this.BntClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BntClose.UseVisualStyleBackColor = true;
             this.BntClose.Click += new System.EventHandler(this.BntClose_Click);
+            // 
+            // pbAddPerson
+            // 
+            this.pbAddPerson.Image = global::DVLDPresentationLayer.Properties.Resources.icons8_add_user_male_16_1_;
+            this.pbAddPerson.Location = new System.Drawing.Point(1080, 17);
+            this.pbAddPerson.Name = "pbAddPerson";
+            this.pbAddPerson.Size = new System.Drawing.Size(73, 41);
+            this.pbAddPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAddPerson.TabIndex = 8;
+            this.pbAddPerson.TabStop = false;
+            this.pbAddPerson.Click += new System.EventHandler(this.pbAddPerson_Click);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.PersonDetails_322;
+            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.showDetailsToolStripMenuItem.Text = "&Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.Add_Person_401;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.addToolStripMenuItem.Text = " Add New ";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.edit_32;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.Delete_32;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // FrmManagePeople
             // 
@@ -255,5 +269,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LbNumberOfRecords;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
     }
 }
