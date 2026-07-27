@@ -1,5 +1,6 @@
 ﻿using DVLDBussinessLayer;
 using DVLDDataAccessLayer;
+using DVLDPresentationLayer.People;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,9 +42,13 @@ namespace DVLDPresentationLayer
 
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmManagePeople frm = new FrmManagePeople();
+            //FrmManagePeople frm = new FrmManagePeople();
 
-            frm.Show();
+            //frm.Show();
+
+            frmListPeople frm = new frmListPeople();
+
+            frm.ShowDialog();
         }
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)

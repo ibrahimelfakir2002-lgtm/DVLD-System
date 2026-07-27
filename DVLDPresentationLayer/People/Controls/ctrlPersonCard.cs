@@ -49,7 +49,18 @@ namespace DVLDPresentationLayer.People.Controls
 
             _FillPersonInfo();
         }
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _Person = clsPerson.FindPersonByNationalNo(NationalNo);
+            if (_Person == null)
+            {
+                ResetPersonInfo();
+                MessageBox.Show("No Person with National No. = " + NationalNo.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            _FillPersonInfo();
+        }
         public void ResetPersonInfo()
         {
 

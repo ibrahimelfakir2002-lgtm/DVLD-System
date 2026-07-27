@@ -929,9 +929,9 @@ namespace DVLDDataAccessLayer
                                      CASE 
                                         WHEN P.Gendor = 0 THEN 'Male'
                                         ELSE 'Female'
-                                    END AS GenderText,
+                                    END AS GendorCaption,
                                     P.DateOfBirth,
-                                     C.CountryName as Nationality ,
+                                     C.CountryName as CountryName ,
                                     
 
                                     P.Phone,
@@ -1070,6 +1070,40 @@ order by  P.FirstName";
             return isFound;
         }
 
-        
+        public static bool DeletePerson(int PersonID)
+        {
+
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"Delete People 
+                                where PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+
+                connection.Close();
+
+            }
+
+            return (rowsAffected > 0);
+
+        }
     }
 }

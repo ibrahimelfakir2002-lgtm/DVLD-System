@@ -351,7 +351,10 @@ namespace DVLDBussinessLayer
         {
             return clsPeopleData.GetAllPersons();
         }
-
+        public static bool DeletePerson(int ID)
+        {
+            return clsPeopleData.DeletePerson(ID);
+        }
 
         public static bool isPersonExist(string NationlNo)
         {
