@@ -185,7 +185,7 @@ namespace DVLDPresentationLayer.People
         {
 
 
-           
+
 
         }
 
@@ -198,7 +198,7 @@ namespace DVLDPresentationLayer.People
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdatePerson((int)dgvPeople.CurrentRow.Cells[0].Value) ;
+            Form frm = new frmAddUpdatePerson((int)dgvPeople.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshPeoplList();
         }
@@ -253,7 +253,7 @@ namespace DVLDPresentationLayer.People
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
     }
 }

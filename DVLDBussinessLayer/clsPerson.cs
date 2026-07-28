@@ -6,7 +6,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using DVLDBusinessLayer;
 using DVLDDataAccessLayer;
 namespace DVLDBussinessLayer
 {
@@ -319,20 +318,20 @@ namespace DVLDBussinessLayer
         }
        
 
-        public static List<string> GetDeleteBlockingReasons(int personID)
-        {
-            List<string> reasons = new List<string>();
+        //public static List<string> GetDeleteBlockingReasons(int personID)
+        //{
+        //    List<string> reasons = new List<string>();
 
-            if (clsUser.IsPersonUser(personID))
-                reasons.Add("This person has a user account.");
+        //    if (clsUser.IsPersonUser(personID))
+        //        reasons.Add("This person has a user account.");
 
-            if (ClsDriver.IsPersonDriver(personID))
-                reasons.Add("This person has a driver profile.");
+        //    if (ClsDriver.IsPersonDriver(personID))
+        //        reasons.Add("This person has a driver profile.");
 
          
 
-            return reasons;
-        }
+        //    return reasons;
+        //}
         public static bool DeletePersonByID(int PersonID)
         {
             return clsPeopleData.DeactivatePerson(PersonID);

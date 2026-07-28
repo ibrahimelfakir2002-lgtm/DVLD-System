@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLDDataAccessLayer", "..\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLDBussinessLayer", "..\DVLDBussinessLayer\DVLDBussinessLayer.csproj", "{E95BBF49-DAC2-4171-A8B4-D86510766B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedDvldClasses", "..\ClassLibrary2\SharedDvldClasses.csproj", "{8495A976-4FEB-42C9-A76C-EF2D8E99F6E3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{E95BBF49-DAC2-4171-A8B4-D86510766B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E95BBF49-DAC2-4171-A8B4-D86510766B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E95BBF49-DAC2-4171-A8B4-D86510766B0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8495A976-4FEB-42C9-A76C-EF2D8E99F6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8495A976-4FEB-42C9-A76C-EF2D8E99F6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8495A976-4FEB-42C9-A76C-EF2D8E99F6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8495A976-4FEB-42C9-A76C-EF2D8E99F6E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

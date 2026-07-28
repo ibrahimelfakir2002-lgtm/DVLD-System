@@ -41,18 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsApplication.cs" />
-    <Compile Include="clsApplicationTypes.cs" />
-    <Compile Include="clsAppointment.cs" />
     <Compile Include="clsCountry.cs" />
-    <Compile Include="ClsDriver.cs" />
-    <Compile Include="clsInternationalLicense.cs" />
-    <Compile Include="clsLicense.cs" />
-    <Compile Include="clsLicenseClass.cs" />
-    <Compile Include="clsLocalDrivingLicenseApplication.cs" />
     <Compile Include="clsPerson.cs" />
-    <Compile Include="clsTest.cs" />
-    <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,10 +50,6 @@
     <ProjectReference Include="..\ClassLibrary1\DVLDDataAccessLayer.csproj">
       <Project>{2d9996c4-b009-4ea1-a5aa-7951bc0dcd03}</Project>
       <Name>DVLDDataAccessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary2\SharedDvldClasses.csproj">
-      <Project>{8495a976-4feb-42c9-a76c-ef2d8e99f6e3}</Project>
-      <Name>SharedDvldClasses</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

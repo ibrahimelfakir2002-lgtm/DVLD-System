@@ -41,13 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsLicenseDetailsDTO.cs" />
-    <Compile Include="Enums\enApplicationStatus.cs" />
-    <Compile Include="Enums\enApplicationType.cs" />
-    <Compile Include="Enums\enIssueReason.cs" />
-    <Compile Include="Enums\enSaveResult.cs" />
-    <Compile Include="Enums\enTestResult.cs" />
-    <Compile Include="Enums\enTestType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

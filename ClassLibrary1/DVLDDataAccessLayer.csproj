@@ -41,27 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsApplicationData.cs" />
-    <Compile Include="clsApplicationTypesData.cs" />
-    <Compile Include="clsAppointmentsData.cs" />
     <Compile Include="clsCountriesData.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
-    <Compile Include="clsDriversData.cs" />
-    <Compile Include="clsInternationalLicenseData.cs" />
-    <Compile Include="clsLicenceClassesSData.cs" />
-    <Compile Include="clsLicenseData.cs" />
-    <Compile Include="clsLocalDrivingLicenseApplicationsData.cs" />
     <Compile Include="clsPeopleData.cs" />
-    <Compile Include="clsTestData.cs" />
-    <Compile Include="clsTestTypesData.cs" />
     <Compile Include="clsUsersData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\SharedDvldClasses.csproj">
-      <Project>{8495a976-4feb-42c9-a76c-ef2d8e99f6e3}</Project>
-      <Name>SharedDvldClasses</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

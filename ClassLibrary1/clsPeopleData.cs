@@ -915,60 +915,56 @@ namespace DVLDDataAccessLayer
         public static DataTable GetAllPersons()
         {
             DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            string query =
+              @"SELECT People.PersonID, People.NationalNo,
+              People.FirstName, People.SecondName, People.ThirdName, People.LastName,
+			  People.DateOfBirth, People.Gendor,  
+				  CASE
+                  WHEN People.Gendor = 0 THEN 'Male'
 
-                                        string query = @"
-                                SELECT 
-                                    P.PersonID,
-                                    P.NationalNo,
-                                    P.FirstName,
-                                    P.SecondName,
-                                    P.ThirdName,
-                                    P.LastName,
-                                     CASE 
-                                        WHEN P.Gendor = 0 THEN 'Male'
-                                        ELSE 'Female'
-                                    END AS GendorCaption,
-                                    P.DateOfBirth,
-                                     C.CountryName as CountryName ,
-                                    
+                  ELSE 'Female'
 
-                                    P.Phone,
-                                    P.Email,
-                                  
-                                    P.ImagePath
+                  END as GendorCaption ,
+			  People.Address, People.Phone, People.Email, 
+              People.NationalityCountryID, Countries.CountryName, People.ImagePath
+              FROM            People INNER JOIN
+                         Countries ON People.NationalityCountryID = Countries.CountryID
+                ORDER BY People.FirstName";
 
-                                FROM People P
-                                INNER JOIN Countries C
-                                    ON P.NationalityCountryID = C.CountryID
 
-order by  P.FirstName"; 
-            SqlCommand cmd = new SqlCommand(query, con);    
+
+
+            SqlCommand command = new SqlCommand(query, connection);
 
             try
             {
-                con.Open();
+                connection.Open();
 
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = command.ExecuteReader();
+
                 if (reader.HasRows)
+
                 {
                     dt.Load(reader);
                 }
 
                 reader.Close();
-            }
-            catch (Exception )
-            {
 
+
+            }
+
+            catch (Exception ex)
+            {
+                throw;
             }
             finally
             {
-                con.Close();
+                connection.Close();
             }
 
             return dt;
-
         }
 
         public static bool DeactivatePerson(int PersonID)
