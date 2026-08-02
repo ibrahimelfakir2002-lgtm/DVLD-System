@@ -37,7 +37,7 @@ namespace DVLDPresentationLayer.People.Controls
             set
             {
                 _ShowAddPerson = value;
-                btnAddNewPerson.Visible = _ShowAddPerson;
+              //  btnAddNewPerson.Visible = _ShowAddPerson;
             }
         }
 
@@ -54,7 +54,6 @@ namespace DVLDPresentationLayer.People.Controls
                 gbFilters.Enabled = _FilterEnabled;
             }
         }
-
         public void LoadPersonInfo(int PersonID)
         {
 
@@ -96,7 +95,7 @@ namespace DVLDPresentationLayer.People.Controls
 
             FindNow();
         }
-
+        
         public void FindNow()
         {
 
@@ -161,6 +160,11 @@ namespace DVLDPresentationLayer.People.Controls
             txtFilterValue.Text = PersonID.ToString();
 
             ctrlPersonCard1.LoadPersonInfo(PersonID);
+        }
+
+        public void FilterFocus()
+        {
+           txtFilterValue.Focus(); 
         }
     }
 }
