@@ -131,5 +131,16 @@ namespace DVLDPresentationLayer.User
         {
             this.Close();   
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.AutoValidate = AutoValidate.Disable;
+            this.Close();
+        }
+
+        private void frmChangePassword_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.AutoValidate = AutoValidate.Disable;
+        }
     }
 }

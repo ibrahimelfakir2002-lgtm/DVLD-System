@@ -65,6 +65,9 @@ namespace DVLDPresentationLayer.People.Controls
         public ctrlPersonCardWithFilter()
         {
             InitializeComponent();
+
+            this.AutoValidate = AutoValidate.Disable;
+
         }
         private int _PersonID = -1;
 
@@ -148,10 +151,7 @@ namespace DVLDPresentationLayer.People.Controls
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            frmAddUpdatePerson frm1 = new frmAddUpdatePerson();
-
-            frm1.DataBack += DataBackEvent;
-            frm1.ShowDialog();
+            
         }
 
         private void DataBackEvent(object sender, int PersonID)
@@ -165,6 +165,15 @@ namespace DVLDPresentationLayer.People.Controls
         public void FilterFocus()
         {
            txtFilterValue.Focus(); 
+        }
+
+        private void btnAddNewPerson_Click_1(object sender, EventArgs e)
+        {
+
+            frmAddUpdatePerson frm1 = new frmAddUpdatePerson();
+
+            frm1.DataBack += DataBackEvent;
+            frm1.ShowDialog();
         }
     }
 }

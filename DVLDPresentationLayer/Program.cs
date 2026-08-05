@@ -19,7 +19,7 @@ namespace DVLDPresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChangePassword(29));
+            Application.Run(new frmListUsers());
         }
     }
 }

@@ -52,6 +52,8 @@ namespace DVLDPresentationLayer.User
                 this.Text = "Update User";
 
                 tpLoginInfo.Enabled = true;
+                btnSave.Enabled = true;    
+               
             }
         }
 
@@ -234,7 +236,19 @@ namespace DVLDPresentationLayer.User
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+
+            this.AutoValidate = AutoValidate.Disable;
             this.Close();
+        }
+
+        private void ctrlPersonCardWithFilter1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmAddUpdateUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.AutoValidate = AutoValidate.Disable;
         }
     }
 }
