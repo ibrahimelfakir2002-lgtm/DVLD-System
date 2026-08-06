@@ -1,4 +1,5 @@
-﻿using DVLDPresentationLayer.People;
+﻿using DVLDPresentationLayer.Login;
+using DVLDPresentationLayer.People;
 using DVLDPresentationLayer.User;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace DVLDPresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListUsers());
+            Application.Run(new frmLogin());
         }
     }
 }
