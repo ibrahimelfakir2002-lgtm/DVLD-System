@@ -54,7 +54,7 @@ namespace DVLDPresentationLayer.Login
 
                 this.Hide();
 
-               frmListUsers frm = new frmListUsers();
+               frmMain frm = new frmMain(this);
                 frm.ShowDialog();
             }
             else
