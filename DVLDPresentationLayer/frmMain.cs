@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DVLDPresentationLayer.Global_Classes;
 using DVLDPresentationLayer.Login;
 using DVLDPresentationLayer.Applications.Application_Types;
+using DVLDPresentationLayer.Tests.TestTypes;
 
 namespace DVLDPresentationLayer
 {
@@ -71,6 +72,13 @@ namespace DVLDPresentationLayer
         {
             frmApplicationTypes frm = new frmApplicationTypes();
             frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListTestTypes frm = new frmListTestTypes();
+
+            frm.ShowDialog();   
         }
     }
 }
