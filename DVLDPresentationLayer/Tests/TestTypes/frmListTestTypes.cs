@@ -48,5 +48,13 @@ namespace DVLDPresentationLayer.Tests.TestTypes
         {
 
         }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditTestType frm = new frmEditTestType((clsTestType.enTestType) (int)dgvTestTypes.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+            frmListTestTypes_Load(null, null);
+        }
     }
 }

@@ -53,17 +53,17 @@
             this.editToolStripMenuItem,
             this.toolStripSeparator1});
             this.cmsTestTypes.Name = "contextMenuStrip1";
-            this.cmsTestTypes.Size = new System.Drawing.Size(208, 56);
+            this.cmsTestTypes.Size = new System.Drawing.Size(257, 89);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(253, 6);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(253, 6);
             // 
             // lblTitle
             // 
@@ -80,7 +80,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(110, 598);
+            this.lblRecordsCount.Location = new System.Drawing.Point(108, 598);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(29, 20);
             this.lblRecordsCount.TabIndex = 121;
@@ -157,8 +157,9 @@
             this.editToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.edit_32;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(207, 40);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
             this.editToolStripMenuItem.Text = "&Edit Test Type";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // frmListTestTypes
             // 

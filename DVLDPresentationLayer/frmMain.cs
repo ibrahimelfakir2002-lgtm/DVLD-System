@@ -13,6 +13,7 @@ using DVLDPresentationLayer.Global_Classes;
 using DVLDPresentationLayer.Login;
 using DVLDPresentationLayer.Applications.Application_Types;
 using DVLDPresentationLayer.Tests.TestTypes;
+using DVLDPresentationLayer.Applications.Local_Driving_License;
 
 namespace DVLDPresentationLayer
 {
@@ -79,6 +80,14 @@ namespace DVLDPresentationLayer
             frmListTestTypes frm = new frmListTestTypes();
 
             frm.ShowDialog();   
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateLocalDrivingLicesnseApplication frm = new frmAddUpdateLocalDrivingLicesnseApplication();
+
+            frm.ShowDialog();
+
         }
     }
 }
