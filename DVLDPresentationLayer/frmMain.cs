@@ -89,5 +89,17 @@ namespace DVLDPresentationLayer
             frm.ShowDialog();
 
         }
+
+        private void servicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageLocalDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListLocalDrivingLicesnseApplications frm = new frmListLocalDrivingLicesnseApplications();
+
+            frm.ShowDialog();
+        }
     }
 }

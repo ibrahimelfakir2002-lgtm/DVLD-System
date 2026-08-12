@@ -86,7 +86,7 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
 
             }
         }
-
+        
         private void _LoadData()
         {
             ctrlPersonCardWithFilter1.FilterEnabled = false;
@@ -110,7 +110,16 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
             lblCreatedByUser.Text = clsUser.FindByUserID(_LocalDrivingLicenseApplication.CreatedByUserID).UserName;
 
         }
-            private void frmAddUpdateLocalDrivingLicesnseApplication_Load(object sender, EventArgs e)
+
+        private void DataBackEvent(object sender, int PersonID)
+        {
+            // Handle the data received
+            __SelectedPersonID = PersonID;
+            ctrlPersonCardWithFilter1.LoadPersonInfo(PersonID);
+
+
+        }
+        private void frmAddUpdateLocalDrivingLicesnseApplication_Load(object sender, EventArgs e)
         {
 
             _ResetDefualtValues();
@@ -209,6 +218,11 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
                 MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ctrlPersonCardWithFilter1.FilterFocus();
             }
+        }
+
+        private void frmAddUpdateLocalDrivingLicesnseApplication_Activated(object sender, EventArgs e)
+        {
+            ctrlPersonCardWithFilter1.FilterFocus();
         }
     }
 }
