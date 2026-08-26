@@ -1,4 +1,5 @@
-﻿using DVLD_DataAccess;
+﻿using ClassLibrary1;
+using DVLD_DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -169,6 +170,50 @@ namespace DVLDBussinessLayer
             IsBaseApplicationDeleted = base.Delete();
             return IsBaseApplicationDeleted;
 
+        }
+
+        public bool DoesPassTestType(clsTestType.enTestType TestTypeID)
+
+        {
+            return clsLocalDrivingLicenseApplicationData.DoesPassTestType(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public bool DoesPassPreviousTest(clsTestType.enTestType CurrentTestType)
+        {
+
+            switch (CurrentTestType)
+            {
+                case clsTestType.enTestType.VisionTest:
+                    //in this case no required prvious test to pass.
+                    return true;
+
+                case clsTestType.enTestType.WrittenTest:
+                    //Written Test, you cannot sechdule it before person passes the vision test.
+                    //we check if pass visiontest 1.
+
+                    return this.DoesPassTestType(clsTestType.enTestType.VisionTest);
+
+
+                case clsTestType.enTestType.StreetTest:
+
+                    //Street Test, you cannot sechdule it before person passes the written test.
+                    //we check if pass Written 2.
+                    return this.DoesPassTestType(clsTestType.enTestType.WrittenTest);
+
+                default:
+                    return false;
+            }
+        }
+
+
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
+
+        public int GetActiveLicenseID()
+        {//this will get the license id that belongs to this application
+            return clsLicenseData.GetActiveLicenseIDByPersonID(this.ApplicantPersonID, this.LicenseClassID);
         }
 
     }

@@ -283,7 +283,7 @@ namespace DVLDBussinessLayer
         {
             //call DataAccess Layer 
 
-            return clsPeopleData.UpdatePersonInfo(this.PersonID,this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email
+            return clsPeopleData.UpdatePerson(this.PersonID,this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth,(short) this.Gendor, this.Address, this.Phone, this.Email
                 , this.NationalityCountryID, this.ImagePath);
 
         }
