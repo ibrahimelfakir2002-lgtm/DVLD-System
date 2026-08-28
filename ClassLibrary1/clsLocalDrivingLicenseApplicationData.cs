@@ -291,5 +291,47 @@ namespace DVLD_DataAccess
             return Result;
 
         }
+
+        public static bool IsThereAnActiveScheduledTest(int LocalDrivingApplicationID, int TestTypeID)
+        {
+            bool isFound = false;
+            SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @" SELECT top 1 Found=1
+                            FROM LocalDrivingLicenseApplications INNER JOIN
+                                 TestAppointments ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID 
+                            WHERE
+                            (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID)  
+                            AND(TestAppointments.TestTypeID = @TestTypeID) and isLocked=0
+                            ORDER BY TestAppointments.TestAppointmentID desc";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            cmd.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingApplicationID);
+            cmd.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            try
+            {
+                con.Open();
+
+                object result = cmd.ExecuteScalar();
+
+                if(result != null)
+                {
+                    isFound = true; 
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+            return isFound;
+        }
     }
 }
