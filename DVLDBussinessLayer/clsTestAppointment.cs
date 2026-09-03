@@ -130,5 +130,31 @@ namespace DVLDBussinessLayer
         {
             return clsTestAppointmentData.GetTestID(TestAppointmentID);
         }
+
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewTestAppointment())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateTestAppointment();
+
+            }
+
+            return false;
+        }
     }
 }

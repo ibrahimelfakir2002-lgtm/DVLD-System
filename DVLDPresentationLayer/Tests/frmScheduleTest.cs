@@ -21,11 +21,18 @@ namespace DVLDPresentationLayer.Tests
         {
             InitializeComponent();
 
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
+
+            _TestTypeID = TestTypeID;
+
+            _AppointmentID = AppointmentID;
         }
 
         private void frmScheduleTest_Load(object sender, EventArgs e)
         {
+            ctrlScheduleTest1.TestTypeID = _TestTypeID;
 
+            ctrlScheduleTest1.LoadInfo(_LocalDrivingLicenseApplicationID, _AppointmentID);
         }
     }
 }

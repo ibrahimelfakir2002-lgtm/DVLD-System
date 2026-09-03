@@ -71,16 +71,16 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
         private void _FillLocalDrivingLicenseApplicationInfo()
         {
 
-            //_LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
 
-            ////incase there is license enable the show link.
-            //llShowLicenceInfo.Enabled = (_LicenseID != -1);
+            //incase there is license enable the show link.
+            llShowLicenceInfo.Enabled = (_LicenseID != -1);
 
 
             lblLocalDrivingLicenseApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblAppliedFor.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
 
-           // lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
+            lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
             ctrlApplicationBasicInfo1.LoadApplicationInfo(_LocalDrivingLicenseApplication.ApplicationID);
         }
 

@@ -1,4 +1,5 @@
 ﻿using DVLDBussinessLayer;
+using DVLDPresentationLayer.Licenses.Local_Licenses;
 using DVLDPresentationLayer.Tests;
 using System;
 using System.Collections.Generic;
@@ -209,26 +210,30 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
 
 
             int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication =
+                    clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID
+                                                    (LocalDrivingLicenseApplicationID);
 
-            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
-
-          
             int TotalPassedTests = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[5].Value;
 
-            bool LIcenseExist = LocalDrivingLicenseApplication.IsLicenseIssued();
+            bool LicenseExists = LocalDrivingLicenseApplication.IsLicenseIssued();
 
-            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3) && !LIcenseExist;
+            //Enabled only if person passed all tests and Does not have license. 
+            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3) && !LicenseExists;
 
-            showLicenseToolStripMenuItem.Enabled = LIcenseExist;
+            showLicenseToolStripMenuItem.Enabled = LicenseExists;
+            editToolStripMenuItem.Enabled = !LicenseExists && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+            ScheduleTestsMenue.Enabled = !LicenseExists;
 
-            editToolStripMenuItem.Enabled = !LIcenseExist && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
-
-            ScheduleTestsMenue.Enabled = !LIcenseExist;
-
-
+            //Enable/Disable Cancel Menue Item
+            //We only canel the applications with status=new.
             CancelApplicaitonToolStripMenuItem.Enabled = (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
-            
-            DeleteApplicationToolStripMenuItem.Enabled = (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+            //Enable/Disable Delete Menue Item
+            //We only allow delete incase the application status is new not complete or Cancelled.
+            DeleteApplicationToolStripMenuItem.Enabled =
+                (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
 
 
             //Enable Disable Schedule menue and it's sub menue
@@ -238,17 +243,18 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
 
             ScheduleTestsMenue.Enabled = (!PassedVisionTest || !PassedWrittenTest || !PassedStreetTest) && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
 
-
             if (ScheduleTestsMenue.Enabled)
             {
+                //To Allow Schdule vision test, Person must not passed the same test before.
                 scheduleVisionTestToolStripMenuItem.Enabled = !PassedVisionTest;
-                scheduleWrittenTestToolStripMenuItem.Enabled = (PassedVisionTest && !PassedWrittenTest);
 
-                scheduleStreetTestToolStripMenuItem.Enabled = (PassedVisionTest && PassedVisionTest && !PassedStreetTest);
+                //To Allow Schdule written test, Person must pass the vision test and must not passed the same test before.
+                scheduleWrittenTestToolStripMenuItem.Enabled = PassedVisionTest && !PassedWrittenTest;
 
+                //To Allow Schdule steet test, Person must pass the vision * written tests, and must not passed the same test before.
+                scheduleStreetTestToolStripMenuItem.Enabled = PassedVisionTest && PassedWrittenTest && !PassedStreetTest;
 
             }
-
 
         }
 
@@ -280,6 +286,19 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
         private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _ScheduleTest(clsTestType.enTestType.StreetTest);
+        }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+
+            frmIssueDriverLicenseFirstTime frm = new frmIssueDriverLicenseFirstTime(LocalDrivingLicenseApplicationID);
+
+            frm.ShowDialog();
+            //refresh
+            frmListLocalDrivingLicesnseApplications_Load(null, null);
+
         }
     }
 }

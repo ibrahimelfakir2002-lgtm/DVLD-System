@@ -56,23 +56,25 @@
             this.editToolStripMenuItem,
             this.takeTestToolStripMenuItem});
             this.cmsApplications.Name = "contextMenuStrip1";
-            this.cmsApplications.Size = new System.Drawing.Size(170, 84);
+            this.cmsApplications.Size = new System.Drawing.Size(257, 117);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.edit_32;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(169, 40);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
             this.editToolStripMenuItem.Text = "&Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // takeTestToolStripMenuItem
             // 
             this.takeTestToolStripMenuItem.Image = global::DVLDPresentationLayer.Properties.Resources.Test_322;
             this.takeTestToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
-            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(169, 40);
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
             this.takeTestToolStripMenuItem.Text = "Take Test";
+            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
             // label1
             // 

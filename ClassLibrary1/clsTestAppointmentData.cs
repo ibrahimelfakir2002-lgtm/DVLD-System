@@ -234,6 +234,7 @@ namespace ClassLibrary1
 
         }
 
+
         public static int AddNewTestAppointment(
              int TestTypeID, int LocalDrivingLicenseApplicationID,
              DateTime AppointmentDate, float PaidFees, int CreatedByUserID, int RetakeTestApplicationID)

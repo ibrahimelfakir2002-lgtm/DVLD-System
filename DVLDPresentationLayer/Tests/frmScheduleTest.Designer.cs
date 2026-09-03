@@ -27,10 +27,11 @@ namespace DVLDPresentationLayer.Tests
             // ctrlScheduleTest1
             // 
             this.ctrlScheduleTest1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlScheduleTest1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlScheduleTest1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
             this.ctrlScheduleTest1.Size = new System.Drawing.Size(571, 722);
             this.ctrlScheduleTest1.TabIndex = 0;
+            this.ctrlScheduleTest1.TestTypeID = DVLDBussinessLayer.clsTestType.enTestType.VisionTest;
             // 
             // frmScheduleTest
             // 

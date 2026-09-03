@@ -156,13 +156,12 @@ namespace ClassLibrary1
         }
 
         public static int AddNewLicense(int ApplicationID, int DriverID, int LicenseClass,
-           DateTime IssueDate, DateTime ExpirationDate, string Notes,
-           float PaidFees, bool IsActive, byte IssueReason, int CreatedByUserID)
+              DateTime IssueDate, DateTime ExpirationDate, string Notes,
+              float PaidFees, bool IsActive, byte IssueReason, int CreatedByUserID)
         {
             int LicenseID = -1;
 
-
-            SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"
                               INSERT INTO Licenses
@@ -188,7 +187,7 @@ namespace ClassLibrary1
                                @CreatedByUserID);
                             SELECT SCOPE_IDENTITY();";
 
-            SqlCommand command = new SqlCommand(query, con);
+            SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
             command.Parameters.AddWithValue("@DriverID", DriverID);
             command.Parameters.AddWithValue("@LicenseClass", LicenseClass);
@@ -208,9 +207,10 @@ namespace ClassLibrary1
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
 
+
             try
             {
-                con.Open();
+                connection.Open();
 
                 object result = command.ExecuteScalar();
 
@@ -228,13 +228,14 @@ namespace ClassLibrary1
 
             finally
             {
-                con.Close();
+                connection.Close();
             }
 
 
             return LicenseID;
 
         }
+
 
         public static bool UpdateLicense(int LicenseID, int ApplicationID, int DriverID, int LicenseClass,
             DateTime IssueDate, DateTime ExpirationDate, string Notes,

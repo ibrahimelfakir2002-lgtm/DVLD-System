@@ -129,5 +129,23 @@ namespace DVLDPresentationLayer.Tests
 
 
         }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+
+
+            frmScheduleTest frm = new frmScheduleTest(_LocalDrivingLicenseApplicationID, _TestType, TestAppointmentID);
+            frm.ShowDialog();
+            frmListTestAppointments_Load(null, null);
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+            frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
+            frm.ShowDialog ();  
+        }
     }
 }
