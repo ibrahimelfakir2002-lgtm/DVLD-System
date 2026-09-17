@@ -126,13 +126,13 @@ namespace ClassLibrary1
 
             SqlCommand cmd = new SqlCommand(query, con);
 
-            cmd.Parameters.AddWithValue("ApplicantPersonID", @ApplicantPersonID);
-            cmd.Parameters.AddWithValue("ApplicationDate", @ApplicationDate);
-            cmd.Parameters.AddWithValue("ApplicationTypeID", @ApplicationTypeID);
-            cmd.Parameters.AddWithValue("ApplicationStatus", @ApplicationStatus);
-            cmd.Parameters.AddWithValue("LastStatusDate", @LastStatusDate);
-            cmd.Parameters.AddWithValue("PaidFees", @PaidFees);
-            cmd.Parameters.AddWithValue("CreatedByUserID", @CreatedByUserID);
+            cmd.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+            cmd.Parameters.AddWithValue("@ApplicationDate", ApplicationDate);
+            cmd.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+            cmd.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
+            cmd.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
+            cmd.Parameters.AddWithValue("@PaidFees", PaidFees);
+            cmd.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
             try
             {

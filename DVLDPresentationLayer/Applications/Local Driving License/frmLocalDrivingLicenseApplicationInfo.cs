@@ -25,5 +25,10 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
         {
             ctrlDrivingLicenseApplicationInfo1.LoadApplicationInfoByLocalDrivingAppID(_ApplicationID);
         }
+
+        private void ctrlDrivingLicenseApplicationInfo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

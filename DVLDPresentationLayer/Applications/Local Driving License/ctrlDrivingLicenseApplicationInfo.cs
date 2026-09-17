@@ -1,4 +1,5 @@
 ﻿using DVLDBussinessLayer;
+using DVLDPresentationLayer.Licenses.Local_Licenses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,6 +88,13 @@ namespace DVLDPresentationLayer.Applications.Local_Driving_License
         private void ctrlDrivingLicenseApplicationInfo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void llShowLicenceInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            frmShowLicenseInfo frm = new frmShowLicenseInfo(_LocalDrivingLicenseApplication.GetActiveLicenseID());
+            frm.ShowDialog();
         }
     }
 }

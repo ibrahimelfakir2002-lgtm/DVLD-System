@@ -54,6 +54,7 @@
             this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
             this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(909, 371);
             this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 0;
+            this.ctrlDrivingLicenseApplicationInfo1.Load += new System.EventHandler(this.ctrlDrivingLicenseApplicationInfo1_Load);
             // 
             // frmLocalDrivingLicenseApplicationInfo
             // 

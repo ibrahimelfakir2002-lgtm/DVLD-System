@@ -14,6 +14,8 @@ using DVLDPresentationLayer.Login;
 using DVLDPresentationLayer.Applications.Application_Types;
 using DVLDPresentationLayer.Tests.TestTypes;
 using DVLDPresentationLayer.Applications.Local_Driving_License;
+using DVLDPresentationLayer.Applications.International_License;
+using DVLDPresentationLayer.Applications.Renew_Local_License;
 
 namespace DVLDPresentationLayer
 {
@@ -100,6 +102,25 @@ namespace DVLDPresentationLayer
             frmListLocalDrivingLicesnseApplications frm = new frmListLocalDrivingLicesnseApplications();
 
             frm.ShowDialog();
+        }
+
+        private void ManageInternationaDrivingLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListInternationalLicesnseApplications frm  = new frmListInternationalLicesnseApplications();
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRenewLocalDrivingLicenseApplication frm = new frmRenewLocalDrivingLicenseApplication();
+            frm.ShowDialog();
+
         }
     }
 }
