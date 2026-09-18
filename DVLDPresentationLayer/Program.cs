@@ -3,6 +3,7 @@ using DVLDPresentationLayer.Applications.Application_Types;
 using DVLDPresentationLayer.Applications.International_License;
 using DVLDPresentationLayer.Applications.Local_Driving_License;
 using DVLDPresentationLayer.Applications.Renew_Local_License;
+using DVLDPresentationLayer.Applications.ReplaceLostOrDamagedLicense;
 using DVLDPresentationLayer.Licenses.Local_Licenses;
 using DVLDPresentationLayer.Login;
 using DVLDPresentationLayer.People;

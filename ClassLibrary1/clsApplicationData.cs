@@ -107,13 +107,14 @@ namespace ClassLibrary1
         }
 
         public static int AddNewApplication(int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID,
-          byte ApplicationStatus, DateTime LastStatusDate,
-          float PaidFees, int CreatedByUserID)
+            byte ApplicationStatus, DateTime LastStatusDate,
+            float PaidFees, int CreatedByUserID)
         {
 
+            //this function will return the new person id if succeeded and -1 if not.
             int ApplicationID = -1;
 
-            SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"INSERT INTO Applications ( 
                             ApplicantPersonID,ApplicationDate,ApplicationTypeID,
@@ -124,40 +125,45 @@ namespace ClassLibrary1
                                       @PaidFees,   @CreatedByUserID);
                              SELECT SCOPE_IDENTITY();";
 
-            SqlCommand cmd = new SqlCommand(query, con);
+            SqlCommand command = new SqlCommand(query, connection);
 
-            cmd.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
-            cmd.Parameters.AddWithValue("@ApplicationDate", ApplicationDate);
-            cmd.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
-            cmd.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
-            cmd.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
-            cmd.Parameters.AddWithValue("@PaidFees", PaidFees);
-            cmd.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+            command.Parameters.AddWithValue("@ApplicationDate", ApplicationDate);
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+            command.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
+            command.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
+            command.Parameters.AddWithValue("@PaidFees", PaidFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+
+
 
             try
             {
-                con.Open();
+                connection.Open();
 
-                object Result = cmd.ExecuteScalar();
-                if (Result != null && int.TryParse(Result.ToString(), out int insertedID))
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
                 {
-
                     ApplicationID = insertedID;
                 }
-
-               
             }
+
             catch (Exception ex)
             {
+                //Console.WriteLine("Error: " + ex.Message);
+
             }
+
             finally
             {
-                con.Close();
+                connection.Close();
             }
+
 
             return ApplicationID;
         }
-
 
         public static bool UpdateApplication(int ApplicationID, int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID,
             byte ApplicationStatus, DateTime LastStatusDate,

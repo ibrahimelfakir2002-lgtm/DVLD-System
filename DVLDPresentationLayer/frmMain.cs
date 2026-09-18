@@ -16,6 +16,7 @@ using DVLDPresentationLayer.Tests.TestTypes;
 using DVLDPresentationLayer.Applications.Local_Driving_License;
 using DVLDPresentationLayer.Applications.International_License;
 using DVLDPresentationLayer.Applications.Renew_Local_License;
+using DVLDPresentationLayer.Applications.ReplaceLostOrDamagedLicense;
 
 namespace DVLDPresentationLayer
 {
@@ -121,6 +122,13 @@ namespace DVLDPresentationLayer
             frmRenewLocalDrivingLicenseApplication frm = new frmRenewLocalDrivingLicenseApplication();
             frm.ShowDialog();
 
+        }
+
+        private void ReplacementLostOrDamagedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplaceLostOrDamagedLicenseApplication frm = new frmReplaceLostOrDamagedLicenseApplication();
+
+            frm.ShowDialog();   
         }
     }
 }
